@@ -9,9 +9,10 @@ from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 
 # ------------------- НАСТРОЙКИ ------------------- #
 import os
-API_TOKEN = os.getenv("API_TOKEN")
-SUPPORT_GROUP_ID = -1003475963710    # ID группы операторов
-MASTER_OPERATOR_ID = 8259110167      # твой ID — получает все username/медиа лично
+
+API_TOKEN = os.environ.get("API_TOKEN")
+SUPPORT_GROUP_ID = int(os.environ.get("SUPPORT_GROUP_ID"))
+MASTER_OPERATOR_ID = int(os.environ.get("MASTER_OPERATOR_ID"))
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
