@@ -1,2 +1,2 @@
-aiaiogram==3.2.2
+aiogram==3.2.2
 python-dotenv
